@@ -81,6 +81,7 @@ public class SQLInterpreter {
 
 					// Ensure one failure does not halt execution so use
 					// continue to process further
+					querycounter++;
 					continue;
 				}
 			}
@@ -118,7 +119,7 @@ public class SQLInterpreter {
 	 */
 	public static void main(String[] args) {
 
-		if (args.length != 3) {
+		if (args.length < 2) {
 			throw new IllegalArgumentException("Incorrect input format, only " + args.length + " provided");
 		}
 
